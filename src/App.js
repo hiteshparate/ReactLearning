@@ -6,6 +6,8 @@ import MyClock  from './components/MyClock';
 import Button from './components/Button';
 import EventBind from './components/EventBind';
 import ParentComponent from './components/ParentComponent';
+import { FormforList } from './components/FormforList';
+import Lists from './components/Lists';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
         {/* <FunctionClock></FunctionClock> */}
       {/* <Button></Button> */}
       {/* <EventBind></EventBind> */}
-      <ParentComponent></ParentComponent>
+      {/* <ParentComponent></ParentComponent> */}
+      {/* <FormforList></FormforList> */}
+      <Lists></Lists>
       </header>
     </div>
   );
