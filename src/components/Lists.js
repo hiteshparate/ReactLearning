@@ -1,34 +1,32 @@
 import React, { Component } from 'react'
 
 export class Lists extends Component {
+    
     constructor(props) {
         super(props)
-    
+
         this.state = {
-             lists: ['hi','bye','try'],
+            lists: ['asd','asdn', 'asdia', 'asnu'],
         }
         this.addList = this.addList.bind(this)
-        this.showList = this.showList.bind(this)
+
     }
 
-    addList = (props)=>{
+    addList = (props,e) => {
         this.setState({
-            lists : this.state.lists.push(props)
+            lists: this.state.lists.push(props)
+
         })
     }
-    showList =()=>{
-        this.state.lists.map((item)=>
-        <li>{item}</li>
-        )
-    }
-    
+
+
     render() {
+        let element = this.state.lists.map((list,index)=><li key={index}>{list}</li>);
         return (
             <div>
-
-               {this.showList()}
+               {element}
                 <input type="text" placeholder="Add To do here" className="form-input" name="todo"></input>
-                <button onClick={()=>this.addList('React')}>Add</button>
+                <button onClick={(e) => this.addList('React',e)}>Add</button>
             </div>
         )
     }
